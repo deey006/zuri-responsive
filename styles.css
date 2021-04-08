@@ -115,8 +115,7 @@ div.background {
     background: #fff;
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
     padding: 15px 40px;
-    width: 550px;
-    height: 220px;
+    width: 80vw;
     position: relative;
 }
 
@@ -392,6 +391,7 @@ div.footer h6 {
 @media screen and (max-width:700px) {
     .hamburger {
         display: block;
+        font-size: 20px;
     }
 
     ul.nav-links {
@@ -399,7 +399,15 @@ div.footer h6 {
     }
 
     div.logo {
-        margin-right: 9rem;
+        /* margin-right: 9rem; */
+    }
+
+    div.background {
+        padding: 0 0;
+    }
+    div.background p {
+        padding-left: 1rem;
+        padding-bottom: 1rem;
     }
     
     div.box1 {
@@ -441,3 +449,32 @@ div.footer h6 {
         text-align: center;
     }            
 }
+@media screen and (max-width:700px){
+    
+    div.hero-background-pos {
+        left: 76%;
+        width: 65px;
+        height: 65px;
+        margin-bottom: 2.5rem;
+    }
+    
+}
+@media screen and (max-width:400px){
+    div.hero-background-pos {
+        left: 76%;
+        width: 65px;
+        height: 65px;
+        margin-bottom: 2.5rem;
+    }
+    div.snapshot-box {
+        padding: 4rem 0.5rem;
+   }
+   div.gallery-section {
+    padding: 0.5rem;
+}
+div.footer {
+    margin-top: 1rem;
+}
+}
+
+
