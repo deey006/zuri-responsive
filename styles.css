@@ -10,10 +10,20 @@ body {
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
 }
-
+.left {
+    display: flex;
+    justify-content: space-around;
+}
+#hide{
+    margin: 0 2vw;
+    list-style: none;
+    font-size: 1.1rem;
+}
 .hamburger {
     margin-left: -3rem;
     display: none;
+    cursor: pointer;
+
 }
 
 .hamburger i {
@@ -21,7 +31,6 @@ body {
     color: skyblue;
     cursor: pointer;
 }
-
 
 div.nav-bar {
     display: flex;
@@ -36,25 +45,19 @@ div.logo {
     color: #bcc3c7;
 }
 
-ul.nav-links {
-    display: flex;
+.right {
+    z-index: 10;
     margin: 0;
     padding: 0;
 }
 
-ul li {
-    margin: 0 2vw;
-    list-style: none;
-    font-size: 1.1rem;
-}
-
-ul li a {
+#hide a {
     text-decoration: none;
     color: #88949B;
     padding: 0.5vw;
 }
 
-ul li a:hover {
+#hide a:hover {
     color: #304353;
     background: #fff;
     padding: 0.5rem;
@@ -366,6 +369,9 @@ div.footer h6 {
     font-size: 1rem;
     padding-top: 6rem;
 }
+.display {
+    display: block;
+}
 
 @media screen and (max-width:949px){
     body{
@@ -392,24 +398,42 @@ div.footer h6 {
     .hamburger {
         display: block;
         font-size: 20px;
+        cursor: pointer;
+        margin-left: -4.2rem;
     }
-
-    ul.nav-links {
-        display: none;
-    }
-
-    div.logo {
-        /* margin-right: 9rem; */
-    }
-
-    div.background {
-        padding: 0 0;
-    }
+    .hamburger.hover{
+        filter:brightness(110%);
+        -webkit-filter:brightness(110%);
+}
+   .hamburger:active {
+       transform: translateY(3px);
+       -webkit-transform: translateY(3px);
+       -moz-transform: translateY(3px);
+       -ms-transform: translateY(3px);
+       -o-transform: translateY(3px);
+}
+   .hero-section {
+       margin-top: -4rem;
+   }
     div.background p {
         padding-left: 1rem;
         padding-bottom: 1rem;
     }
-    
+
+    div.nav-bar {
+        flex-direction: column;
+        padding: 1rem 1rem;
+
+    }
+    .right {
+       animation: slide 1s;
+       -webkit-animation: slide 1s;
+}
+    #hide a{
+       display: block;
+       padding-bottom: 5rem;
+       margin-top: 2rem;
+    }
     div.box1 {
         width: 100%;
         height: 330px;
@@ -466,6 +490,10 @@ div.footer h6 {
         height: 65px;
         margin-bottom: 2.5rem;
     }
+    .hamburger {
+        margin-left: -6.5rem;
+    }
+
     div.snapshot-box {
         padding: 4rem 0.5rem;
    }
@@ -477,4 +505,22 @@ div.footer {
 }
 }
 
-
+@media  screen and (max-width:375px) {
+    .hamburger {
+        margin-left: -3.2rem;
+    }
+}
+@media  screen and (max-width:320px) {
+    .hamburger {
+        margin-left: -2.5rem;
+    }
+}
+@media  screen and (max-width:280px) {
+    .hamburger {
+        margin-left: -1.98rem;
+    }
+}
+@keyframes slide {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
